@@ -80,8 +80,7 @@ function checklegal($teststring,$legals)
 function texttoarraytable($text,$keys,$separator)
 	{
 	//Explode text into rows array
-	$newlines = array("\r\n","\n\r","\r\r","\n\n");
-	$text = str_replace($newlines,"\n",$text);
+	$text = standardisenewlines($text);
 	$text = explode("\n",$text);
 	
 	if ($keys == "Top")
